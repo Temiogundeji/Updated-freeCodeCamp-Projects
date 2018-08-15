@@ -1,0 +1,355 @@
+<html>
+    <head>
+        <title>Technical Documentation Page</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <h1 id="title">JavaScript Documentation</h1>
+        </header>
+        <div id="container">
+            <aside id="side-nav">
+                <nav id="navbar">
+                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link" href="#intro">Introduction</a>
+                    <a class="nav-link" href="#Output">Output</a>
+                    <a class="nav-link" href="#Syntax">Syntax</a>
+                    <a class="nav-link" href="#Statements">Statements</a>
+                    <a class="nav-link" href="#Comments">Comments</a>
+                    <a class="nav-link" href="#Variables">Variables</a>
+                    <a class="nav-link" href="#Operators">Operators</a>
+                    <a class="nav-link" href="#Arithmetic">Arithmetic</a>
+                    <a class="nav-link" href="#Assignment">Assignment</a>
+                </nav>
+            </aside>
+            <main id="main-doc">
+                <section class="main-section" id="home">
+                    <header><h2>Home</h2></header>
+                    <img src="img/w3javascript.gif">
+                    <article>
+                            <p>
+                                    JavaScript is the programming language of HTML and the Web.
+
+                                    Programming makes computers do what you want them to do.
+                                    
+                                    JavaScript is easy to learn.
+                                    
+                                    This tutorial will teach you JavaScript from basic to advanced.     
+                            </p>
+                            <hr>
+                            <h3>Examples in Each Chapter</h3>
+                            <p> 
+                                To get what javascript can do on your web pages, click on the button below.
+                                <div class="code-box">
+                                    <code>
+                                        <body>
+
+                                                <h1>My First JavaScript</h1>
+                                                
+                                                <button type="button"
+                                                onclick="document.getElementById('demo').innerHTML = Date()">
+                                                Click me to display Date and Time.</button>
+                                                
+                                                <p id="demo"></p>   
+                                        </body> 
+                                    </code>
+                                </div>
+                            </p>
+                            <p>
+                                Make sure you follow the instructions throughout. 
+                            </p>
+                    </article>
+                </section>
+                <section class="main-section" id="intro">
+                    <header><h2>Introduction</h2></header>
+                    <article>
+                        <p>
+                                JavaScript is the most popular programming language in the world.
+
+                                This page contains some examples of what JavaScript can do.
+                        </p><hr>
+                        <h3>JavaScript Can Change HTML Content</h3>
+                        <p>
+                                One of many HTML methods is getElementById().
+
+                                This example uses the method to "find" an HTML element (with id="demo"), and changes the element content (innerHTML) to "Hello JavaScript":
+                        </p>
+                        <div class="code-box">
+                            <h4>Example:</h4>
+                            <code>
+                                    document.getElementById("demo").innerHTML = "Hello JavaScript";
+                            </code>
+                        </div>
+                        <h3>JavaScript Can Change HTML Styles (CSS)</h3>
+                        <p>
+                            Changing the style of an HTML element, is a variant of changing an HTML attribute:                    </p>
+                        <div class="code-box">
+                            <h4>Example:</h4>
+                            <pre>
+                                    <code>
+                                            function myFunction() {
+                                                var x = document.getElementById("demo");
+                                                x.style.fontSize = "25px";           
+                                                x.style.color = "red"; 
+                                            }
+                                    </code>
+                            </pre> 
+                        </div>
+                    </article>
+                </section>
+                <section class="main-section" id="Output">
+                    <header><h2>Output</h2></header>
+                    <article>
+                            JavaScript does NOT have any built-in print or display functions.<hr>
+
+                            <h3>JavaScript Display Possibilities</h3>
+                            <p>
+                                    JavaScript can "display" data in different ways:
+                                    <ul>
+                                        <li> Writing into an alert box, using window.alert().</li>
+                                        <li> Writing into the HTML output using document.write().</li>
+                                        <li> Writing into an HTML element, using innerHTML.</li>
+                                        <li> Writing into the browser console, using console.log().</li>
+                                    </ul>
+                            </p>
+                            
+                    </article>
+                </section>
+                <section class="main-section" id="Syntax">
+                    <header><h2>Syntax</h2></header>
+                    <article>
+                            JavaScript syntax is the set of rules, how JavaScript programs are constructed.<hr>
+                            <h3>JavaScript Programs</h3>
+                            <p>
+                                    A computer program is a list of "instructions" to be "executed" by the computer.
+
+                                    In a programming language, these program instructions are called statements.
+                                    
+                                    JavaScript is a programming language.
+                                    
+                                    JavaScript statements are separated by semicolons.
+                            </p>
+                            <div class="code-box">
+                                <h3>Example:</h3>
+                                <pre>
+                                    <code>
+                                            var x = 5;
+                                            var y = 6;
+                                            var z = x + y;
+                                    </code>
+                                </pre>
+                            </div>
+                                <h3>JavaScript Values</h3>
+                                <p>The JavaScript syntax defines two types of values: Fixed values and variable values.
+                                Fixed values are called literals. Variable values are called variables.</p>
+
+                            <h3> JavaScript Literals</h3>
+                                <p>The most important rules for writing fixed values are:
+                                Numbers are written with or without decimals:</p>
+
+                    </article>
+                </section>
+                <section class="main-section" id="Statements">
+                    <header><h2>Statements</h2></header>
+                <article>
+                        <p> JavaScript statements are composed of:
+                        Values, Operators, Expressions, Keywords, and Comments.
+                        </p><hr>
+                        <h3>JavaScript Programs</h3> 
+                        <p>
+                                Most JavaScript programs contain many JavaScript statements.
+                                The statements are executed, one by one, in the same order as they are written.
+                                In this example, x, y, and z is given values, and finally z is displayed:
+                        </p>
+                        Note:A javascript statement must always end in semi-colon.
+                        <div class="code-box">
+                            <h3>Example:</h3>
+                            <pre>
+                                <code>
+                                        var x = 5;
+                                        var y = 6;
+                                        var z = x + y;
+                                        document.getElementById("demo").innerHTML = z;
+                                </code>
+                            </pre>
+                        </div>
+                </article>
+                </section>
+                <section class="main-section" id="Comments">
+                    <header><h1>Comments<h2></header>
+                    <article>
+                            JavaScript comments can be used to explain JavaScript code, and to make it more readable.
+
+                            JavaScript comments can also be used to prevent execution, when testing alternative code.<hr>
+                            <h3>Single Line Comments</h3>
+                            <p>Single line comments start with //.
+                                Any text between // and the end of the line, will be ignored by JavaScript (will not be executed).
+
+                                This example uses a single line comment before each line, to explain the code:
+                            </p>
+                            <div class="code-box">
+                                <pre>
+                                    <code>
+                                        <h3>Example:</h3>
+                                        // Change heading:
+                                        document.getElementById("myH").innerHTML = "My First Page";
+                                        // Change paragraph:
+                                        document.getElementById("myP").innerHTML = "My first paragraph.";
+                                    </code>
+                                </pre>
+                            </div>
+
+                            <h3>Multi-line Comments</h3
+                            <p>Multi-line comments start with /* and end with */.
+
+                            Any text between /* and */ will be ignored by JavaScript.
+
+                            This example uses a multi-line comment (a comment block) to explain the code:</p>
+                            <div class="code-box">
+                                <h3>Example:</h3>
+                                <pre>
+                                    <code>
+                                            /*
+                                            The code below will change
+                                            the heading with id = "myH"
+                                            and the paragraph with id = "myP"
+                                            in my web page:
+                                            */
+                                            document.getElementById("myH").innerHTML = "My First Page";
+                                            document.getElementById("myP").innerHTML = "My first paragraph.";
+                                    </code>
+                                </pre>
+                            </div>
+                    </article>
+                </section>
+                <section class="main-section" id="Variables">
+                    <header><h2>Variables</h2></header>
+                <article>
+                        <h3>JavaScript Variables</h3>
+                        <p>In a programming language, variables are used to store data values.<hr>
+
+                        JavaScript uses the var keyword to declare variables.
+
+                        An equal sign is used to assign values to variables.
+
+                        In this example, x is defined as a variable. Then, x is assigned (given) the value 6:</p>
+                        <div class="code-box">
+                            <h3>Example:</h3>
+                            <pre>
+                                <code>
+                                        var pi = 3.14;
+
+                                        var person = "John Doe";
+
+                                        var answer = 'Yes I am!';
+
+                                        var x;
+
+                                        x = 6;
+                                </code>
+                            </pre>
+                        </div>
+                        <h3>JavaScript Data Types</h3>
+                            <p>JavaScript variables can hold numbers like 100, and text values like "John Doe".
+
+                                    In programming, text values are called text strings.
+            
+                                    JavaScript can handle many types of data, but for now, just think of numbers and strings.
+            
+                                    Strings are written inside double or single quotes. Numbers are written without quotes.
+            
+                                    If you put quotes around a number, it will be treated as a text string.
+                            </p>
+                </article>
+                </section>
+                <section class="main-section" id="Operators">
+                    <header><h2>Operators</h2></header>
+                <article>
+                    <h3>JavaScript Operators</h3>
+                    <p>JavaScript uses an assignment operator ( = ) to assign values to variables:</p>
+                    <div class="code-box">
+                        <pre>
+                            <code>
+                                    var x = 5;
+
+                                    var y = 6;
+                            </code>
+                        </pre>
+                    </div></article>
+                </section>
+                <section class="main-section" id="Arithmetic">
+                    <header><h2>Arithmetic</h2></header>
+                    <article>
+                            <h3>JavaScript Arithmetic Operators</h3>
+                            <p>Arithmetic operators perform arithmetic on numbers (literals or variables).</p>
+                            <div class="code-box">
+                                <h3>Adding</h3>
+                                <pre>
+                                    <code>
+                                            var x = 5;
+                                            var y = 2;
+                                            var z = x + y;
+                                    </code>
+                                </pre>
+
+                                <h3>Subracting</h3>
+                                <pre>
+                                    <code>
+                                            var x = 5;
+                                            var y = 2;
+                                            var z = x - y;
+                                    </code>
+                                </pre>
+
+                                <h3>Multiplying</h3>
+                                <pre>
+                                    <code>
+                                            var x = 5;
+                                            var y = 2;
+                                            var z = x * y;
+                                    </code>
+                                </pre>
+
+                                <h3>Dividing</h3>
+                                <pre>
+                                    <code>
+                                            var x = 5;
+                                            var y = 2;
+                                            var z = x/y;
+                                    </code>
+                                </pre>
+
+                                <h3>Incrementing</h3>
+                                <pre>
+                                    <code>
+                                            var x = 5;
+                                            x++;
+                                            var z = x;
+                                    </code>
+                                </pre>
+
+                                <h3>Decrementing</h3>
+                                <pre>
+                                    <code>
+                                            var x = 5;
+                                            x--;
+                                            var z = x
+                                    </code>
+                                </pre>
+                            </div>
+                    </article>
+                </section>
+                <section class="main-section" id="Assignment">
+                    <header><h2>Assignment</h2></header>
+                    <article>
+                            <h3>JavaScript Assignment Operators</h3>
+                            <p>Assignment operators assign values to JavaScript variables.</p>
+                    </article>
+                </section>
+            </main>
+        </div>
+        <footer>
+            <p>All content are adapted from <a href="www.w3schools.com">W3 school</a></p>
+        </footer>
+    </body>
+</html>

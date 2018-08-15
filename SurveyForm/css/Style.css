@@ -1,0 +1,201 @@
+body{
+  background-color:#d1d1e0;
+  color:#3e3e5b;
+  font-family:sans-serif;
+  align-items: center;
+  display:flex;
+}
+#survey-container{
+  background:#fff;
+  border-radius:5px;
+  display:flex;
+  flex-direction:column;
+  font-size: 18px;
+  /* align-items: center; */
+  font-family:'Raleway', Helvetica, sans-serif;
+  padding:20px 100px;
+  margin:0 auto;
+}
+#survey-form{
+  padding:20px;
+  align-items: center;
+}
+.form-row{
+  display:flex;
+  align-items:center;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.form-col1{
+  width:40%;
+}
+.form-col1 label{
+  font-size: 18px;
+}
+.form-col2{
+  width:60%;
+}
+#header{
+  text-align:center;
+}
+#header h1{
+  font-size:42px;
+  font-weight:400;
+}
+#header p{
+  font-weight:200px;
+  color:#3e3e5b;
+}
+  input[type=text]{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width:60%;
+    padding:6px 15px;
+    color:#3e3e5b;
+}
+/* input[type=text]:focus{
+  border: 3px solid #3e3e5b;
+} */
+  input[type=email]{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width:60%;
+    padding:6px 15px;
+    color:#3e3e5b;
+}
+    input[type=number]{
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width:60%;
+      padding:6px 15px;
+      color:#3e3e5b;
+  }
+  input[type=radio]{
+    margin-bottom:10px;
+  }
+  input[type=checkbox]{
+    margin-bottom:10px;
+  }
+    select{
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width:60%;
+      padding:6px 15px;
+      color:#3e3e5b;
+    }
+    textarea{
+      border: 1px solid #ccc;
+      border-radius:5px;
+      padding:20px 30px;
+    }
+    input[type=submit]{
+      background-color:#4CAF50;
+      border:none;
+      border-radius:3px;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    @media only screen and (max-width:500px) {
+      body{
+        background-color:#d1d1e0;
+        color:#3e3e5b;
+        font-family:sans-serif;
+        align-items: center;
+        display:flex;
+      }
+      #survey-container{
+        background:#fff;
+        border-radius:5px;
+        display:flex;
+        flex-direction:column;
+        font-size: 18px;
+        /* align-items: center; */
+        font-family:'Raleway', Helvetica, sans-serif;
+        padding:10px 50px;
+        margin:0 auto;
+      }
+      #survey-form{
+        padding:10px;
+        align-items: center;
+      }
+      .form-row{
+        display:flex;
+        align-items:center;
+        flex-direction: column;
+        margin-bottom: 10px;
+      }
+      .form-col1{
+        width:100%;
+        margin-bottom:10px;
+      }
+      .form-col1 label{
+        font-size: 18px;
+        margin-bottom:10px;
+      }
+      .form-col2{
+        width:100%;
+      }
+      #header{
+        text-align: center;
+      }
+      #header h1{
+        font-size:32px;
+        font-weight:300;
+      }
+      #header p{
+        font-weight:200;
+        color:#3e3e5b;
+      }
+        input[type=text]{
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          width:100%;
+          padding:6px 15px;
+          color:#3e3e5b;
+      }
+      input[type=radio]{
+        margin-bottom:10px;
+      }
+      input[type=checkbox]{
+        margin-bottom:10px;
+      }
+        input[type=email]{
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          width:100%;
+          padding:6px 15px;
+          color:#3e3e5b;
+      }
+          input[type=number]{
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width:100%;
+            padding:6px 15px;
+            color:#3e3e5b;
+        }
+          select{
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width:100%;
+            padding:6px 15px;
+            color:#3e3e5b;
+          }
+          textarea{
+            border: 1px solid #ccc;
+            border-radius:5px;
+            padding:20px 30px;
+          }
+          input[type=submit]{
+            background-color:#4CAF50;
+            border:none;
+            border-radius:3px;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+          }
+    }

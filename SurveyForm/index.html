@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Survey Form</title>
+      <link rel="stylesheet" type="text/css" href="css/Style.css">
+  </head>
+  <body>
+    <div id="survey-container">
+      <header id="header">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Let us know how we can improve freeCodeCamp</p>
+      </header>
+      <main>
+          <form id="survey-form">
+            <div class="form-row">
+              <div class="form-col1">
+                <label for="name" id="name-label">* Name:</label>
+              </div>
+              <div class="form-col2">
+                <input placeholder="Enter your name..." required type="text" id="name">
+            </div>
+            </div>
+            <div class="form-row">
+              <div class="form-col1">
+                <label  for="email" id="email-label">* Email:</label>
+              </div>
+              <div class="form-col2">
+                <input placeholder="Enter your email..." required type="email" id="email"><br>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-col1">
+                <label for="age" id="age-label-label">* Age:</label>
+              </div>
+              <div class="form-col2">
+                <input placeholder="Enter your age..." required type="number" id="age"><br>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-col1">
+                <label for="role" id="role-label">What option best describe your current role:</label>
+              </div>
+              <div class="form-col2">
+                <select required name="user-role">
+                  <option value="student">Student:</option>
+                  <option value="full-time job">Full-time job</option>
+                  <option value="full-time learner">Full-time learner</option>
+                  <option value="prefer not to say">Prefer not to say</option>
+                  <option value="other">Other</option>
+                </select><br>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-col1">
+                <label for="recommend" id="recommend-label">How likely is that you will recommend freeCodeCamp to a friend:
+                </label><br>
+              </div>
+              <div class="form-col2">
+                <label for="recc" class="label-recc"><input type="radio" name="recommend" value="male" checked>Definitely</label><br>
+                <label for="recc"><input type="radio" name="recommend" value="female">Maybe</label><br>
+                <label for="recc"><input type="radio" name="recommend" value="other">Not sure</label><br>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-col1">
+                <label for="why-fcc" id="why-fcc">What do you like most in fcc:</label>
+              </div>
+              <div class="form-col2">
+                <select required>
+                  <option value="Challenges">Challenged</option>
+                  <option value="Projects">Projects</option>
+                  <option value="Community">Community</option>
+                  <option value="Open-source">Open-source</option>
+                </select><br>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-col1">
+                <label for="why-fcc" id="why-fcc">Things that should be improved in the future
+(Check all that apply):</label><br>
+              </div>
+              <div class="form-col2">
+                <label for="definitely" id="label-frontend"><input type="checkbox">Front-end</label><br>
+                <label for="apim" id="label-apim"><input type="checkbox">Api and Microservice</label><br>
+                <label for="backend" id="label-backend"><input type="checkbox">Backend</label><br>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-col1">
+                <label for="comment" id="comment">Any suggestions or comment:</label>
+              </div>
+              <div class="form-col2">
+                <textarea placeholder="Enter your comment here..." name="comment" id="comment"></textarea><br>
+              </div>
+            </div>
+            <div class="form-row">
+              <input type="submit" id="submit">
+            </div>
+          </form>
+      </main>
+    </div>
+  </body>
+</html>
