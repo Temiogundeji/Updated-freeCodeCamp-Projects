@@ -1,0 +1,21 @@
+$(document).ready(function(){
+    $('#all').hide();
+    $('#online').hide();
+    $('#offline').hide();
+
+    $('#tab-1').click(function(){
+        $('#all').show();
+        $('#online').hide();
+        $('#offline').hide();
+    });
+    $('#tab-2').click(function(){
+        $('#all').hide();
+        $('#online').show();
+        $('#offline').hide();
+    });
+    $('#tab-3').click(function(){
+        $('#all').hide();
+        $('#online').hide();
+        $('#offline').show();
+    });
+});
