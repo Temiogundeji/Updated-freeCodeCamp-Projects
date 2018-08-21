@@ -1,111 +1,59 @@
 
-
-    $(document).ready(function(){
-        $('#all').hide();
-        $('#online').hide();
-        $('#offline').hide();
-    
-        $('#tab-1').click(function(){
-            $('#all').show();
-            $('#online').hide();
-            $('#offline').hide();
-        });
-        $('#tab-2').click(function(){
-            $('#all').hide();
-            $('#online').show();
-            $('#offline').hide();
-        });
-        $('#tab-3').click(function(){
-            $('#all').hide();
-            $('#online').hide();
-            $('#offline').show();
-        });
-      //List of freecodecamp users
-      var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
-      var game, status, logo, name, description;
-      //Get the url of each channel streaming
-     /* $.each(channels, function(channel){
-          var singleStream = "https://wind-bow.gomix.me/twitch-api/streams"+ "/" + channel;
+function getStreamersInfo(){
+    //List of freecodecamp users
+   var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+   
+   channels.map( (channel) =>{
+       var channelUrl = "https://wind-bow.gomix.me/twitch-api/channels" + "/" + channel + '?callback=?';
+       var streamUrl = "https://wind-bow.gomix.me/twitch-api/streams"+ "/" + channel + '?callback=?';
        
-       //Return the name and status of each streams
-       $.getJSON(singleStream, function(data){
+        //Return the name and status of each streams
+        $.getJSON(channelUrl, function(dat){
+            var logo, name, description,url;
+            logo = dat.logo;
+            name = dat.display_name;
+            description = dat.status;
+            url = dat.url;
+
+             //Return the display name, status and logo
+            $.getJSON(streamUrl, function(data){
+                var game, status;
             if(data.stream == null){
                 game = "offline";
                 status = "offline";
+                displayData(name, game, logo,status, description, url);
             }
-         else if(data.stream == undefined){
+            else if(data.stream == undefined){
                 game = "Account closed";
                 status = "offline";
-         }
-         else{
+                displayData(name, game, logo,status, description, url);
+            }
+            else{
                 game = data.stream.game;
                 status = "online";
-         }
-       });
-      }); */
-    //   channels.map((channel)=>{
-    //     var singleStream = "https://wind-bow.gomix.me/twitch-api/streams"+ "/" + channel + '?callback=?';
-       
-    //     //Return the name and status of each streams
-    //     $.getJSON(singleStream, function(data){
-    //          if(data.stream == null){
-    //              game = "offline";
-    //              status = "offline";
-    //          }
-    //       else if(data.stream == undefined){
-    //              game = "Account closed";
-    //              status = "offline";
-    //       }
-    //       else{
-    //              game = data.stream.game;
-    //              status = "online";
-    //       }
-    //     });
-    //   });
-      
-      //Get the url of each channel
-    /*   $.each(channels, function(channel){
-                var singleChannel = "https://wind-bow.gomix.me/twitch-api/channels" + "/" + channel + '?callback=?';
-       //Return the data of each channel
-        $.getJSON(singleChannel, function(data){
-                logo = data.logo;
-                name = data.display_name;
-                description = data.status;
-        });
-      });  */
+                displayData(name, game, logo,status, description, url);
+            }
 
-      channels.map((channel) => {
-        var singleChannel = "https://wind-bow.gomix.me/twitch-api/channels" + "/" + channel + '?callback=?';
-        var singleStream = "https://wind-bow.gomix.me/twitch-api/streams"+ "/" + channel + '?callback=?';
-       
-        //Return the name and status of each streams
-        $.getJSON(singleStream, function(data){
-             if(data.stream == null){
-                 game = "offline";
-                 status = "offline";
-             }
-          else if(data.stream == undefined){
-                 game = "Account closed";
-                 status = "offline";
-          }
-          else{
-                 game = data.stream.game;
-                 status = "online";
-          }
-          
-          var display =  "<span>" + name + "</span>" +
-          "<span>" + status + "</span>" + "<span>" + game + "</span>"+
-          "<span>" + description + "</span></div>";
-         $('#all').html(display);
-        });
-        //Return the data of each channel
-         $.getJSON(singleChannel, function(data){
-                 logo = data.logo;
-                 name = data.display_name;
-                 description = data.status;
-                console.log(name);
-                console.log(status);
-         });
-      });
-      
+            });
+        });  
     });
+}
+
+function displayData(name, game, logo,status, description, url){
+    var display = `
+    <div>
+        <a href="${url}" target="_blank">
+            <img src="${logo}">
+            <span>${status}</span>
+            <span>${game}</span>
+            <span>${description}
+        </a>
+    </div>
+`
+$('#result').html(display);
+console.log(name);
+}
+
+$(document).ready(function(){
+    getStreamersInfo();  
+});

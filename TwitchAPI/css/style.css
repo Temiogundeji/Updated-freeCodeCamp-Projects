@@ -10,35 +10,24 @@ body{
     text-align: center;
 }
 #header{
-    height:70%;
-    width:100%;
+    padding:5px 15px;
     text-align:center;
-    background-color:#ddd;
-    color:rgb(226, 205, 19);
+    background-color:rgba(21, 196, 114, 0.89);
+    color:rgb(226, 78, 19);
 }
-#nav{
-    margin-bottom:20%;
-    background-color: rgb(226, 205, 19);
-    max-height:50%;
-    max-width:100%;
+#status{
+    background-color:#eee;
+    padding:15px 10px;
 }
-#nav ul{
-    list-style-type: none;
-    overflow:hidden;
+select{
+    padding:5px 15px;
+    border-radius:5px;
 }
-#nav ul li{
-    display: inline-block;
-    margin-right:5%;
+#result{
+    padding:10px 30px;
 }
- ul li a{
-    color:#eee;
-    padding:5% 5%;
-    max-width:5%;
-    text-decoration: none;
-}
-a:active,a:hover {
-    padding: 10px 10px;
-    overflow:hidden;
-    color: rgba(206, 62, 62, 0.336);
+#logo{
+    height:50px;
+    width:50px;
 }
 
