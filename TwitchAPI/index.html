@@ -9,15 +9,13 @@
                     <h2>Twitch Streamer</h2>
                 </div>
             	<div id="status">
-                  <select id="statuss">
-                      <option>All</option>
-                      <option>Online</option>
-                      <option>Offline</option>
+                  <select id="statuss" onchange="filterData">
+                      <option value="all">All</option>
+                      <option value="online">Online</option>
+                      <option value="offline">Offline</option>
                   </select>
                 </div>
-                <div id="result">
-                    <div id="all">All</div>
-                </div>
+                <div id="result"></div>
         </div>
         <script src="js/jquery.min.js"></script>
         <script src="js/script.js"></script>

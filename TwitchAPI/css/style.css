@@ -13,7 +13,7 @@ body{
     padding:5px 15px;
     text-align:center;
     background-color:rgba(21, 196, 114, 0.89);
-    color:rgb(226, 78, 19);
+    color:orangered;
 }
 #status{
     background-color:#eee;
@@ -29,5 +29,11 @@ select{
 #logo{
     height:50px;
     width:50px;
+}
+a{
+    text-decoration: none;
+    color:#eee;
+    /* background-color:orangered; */
+    padding:20px 15px;
 }
 
